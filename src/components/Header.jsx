@@ -4,9 +4,11 @@ import { useState } from 'react';
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <header className="site-header">
-      <a className="wordmark" href="#home" aria-label="MAFREM home">
+      <a className="wordmark" href="/" aria-label="MAFREM home">
         MAFREM<span>.</span>
       </a>
 
@@ -24,13 +26,13 @@ function Header() {
         className={`main-nav ${menuOpen ? 'menu-open' : ''}`}
         aria-label="Main navigation"
       >
-        <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
-      <a href="/about" onClick={() => setMenuOpen(false)}>About</a>
-        <a href="#expertise" onClick={() => setMenuOpen(false)}>What I Do</a>
-        <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+        <a href="/" onClick={closeMenu}>Home</a>
+        <a href="/about" onClick={closeMenu}>About</a>
+        <a href="/#expertise" onClick={closeMenu}>What I Do</a>
+        <a href="/#projects" onClick={closeMenu}>Projects</a>
       </nav>
 
-      <a className="header-cta" href="#contact">
+      <a className="header-cta" href="/#contact">
         Let's talk <span aria-hidden="true">↗</span>
       </a>
     </header>
