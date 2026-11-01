@@ -45,7 +45,7 @@ const projects = [
     status: 'Active',
     number: '01',
     visual: 'aul',
-    link: '',
+    link: 'https://whatsapp.com/channel/0029Vb8M3K8Fi8xXaQFAio0X',
   },
   {
     category: 'ARTIFICIAL INTELLIGENCE',
@@ -242,6 +242,17 @@ function App() {
                   <p>{project.description}</p>
                   <span className="project-status">{project.status}</span>
                   <p className="project-role">Role: {project.role}</p>
+                  {project.link && (
+  <a
+    className="project-link"
+    href={project.link}
+    target="_blank"
+    rel="noreferrer"
+    onClick={(event) => event.stopPropagation()}
+  >
+    Visit WhatsApp Channel ↗
+  </a>
+)}
                 </div>
 
                 <span className="project-arrow" aria-hidden="true">

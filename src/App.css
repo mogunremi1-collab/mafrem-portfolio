@@ -1224,3 +1224,17 @@ transform: rotate(-5deg);
     gap: 15px;
   }
 }
+.project-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.project-link:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
